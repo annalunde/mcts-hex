@@ -1,10 +1,10 @@
-# Monte Carlo tree search hex solver using Deep Reinforcement Learning
+# Monte Carlo tree search Hex solver using Deep Reinforcement Learning
 
 This is the second of three projects in the AI programming course at NTNU. The group built an Actor Reinforcement Learner and has applied it to different instances of the game Hex. The Actor is a deep neural network that is trained on the probabilities given by the MCTS.
 
 Figure 1 provides a high-level view of the actor.
 
-<img src=images/actornetwork.png width="500" height="500">
+<img src=images/actornetwork.png width="400" height="500">
 
 **File structure:**
 
@@ -21,6 +21,8 @@ Figure 1 provides a high-level view of the actor.
 The config folder consists of different configs that have been used for the different instances of the game. In main.py it reads in these configs
 and starts the whole training loop. The oht-folder is used for playing on the server created by the course administrators to test our models against their models. The nim-folder was used under developing the MCTS, to test that it worked on a less complicated game. Profiling was used to track the runtime of each element of the project.
 
+Beneath are the progression of learning and a visualization of game play shown. For the progression of learning, models were saved under different stages of training and then played against each other. The increasing model number corresponds to an increasing level of learning. The visualization of game play shows a trained actor (blue) against an actor that is only trained for a few episodes (red). 
+
 |                Progression of Learning                 |                                Visualization of Game Play                                 |
 | :----------------------------------------------------: | :---------------------------------------------------------------------------------------: |
-| <img src=images/learning.png width="475" height="350"> | ![Visualization of game play](https://media.giphy.com/media/4DNHzulV7JuVCIfnNr/giphy.gif) |
+| <img src=images/learning.png width="475" height="350"> | ![Visualization of game play](https://media.giphy.com/media/6ukpJEd6gd1YH5nO4I/giphy.gif) |
