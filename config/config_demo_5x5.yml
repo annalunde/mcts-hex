@@ -1,0 +1,74 @@
+Actor:
+  #Learning rate
+  learning_rate: 0.002
+  # 0.001 var bra for 100/200->100 4x4 modell med epsilon 3->0.01 dims [256, 128, 64, 32] og mcts epsilon 0
+
+  #Internal layer dimensions
+  internal_dims: [256, 128, 64, 32]
+
+  #Batch size
+  batch_size: 0.7
+
+  #Number of epochs
+  epochs: 1
+
+  #Max length of replay buffer
+  replay_buffer_max_len: 100000000
+
+  #Path to trained models
+  path_to_trained: "models/pretrained/4x4_100_200_"
+
+  #Optimizer
+  opt: "Adam"
+
+  #Activation function
+  activation: "relu"
+
+  #Epsilon
+  epsilon: 0.01
+
+  #Final epsilon
+  final_epsilon: 0.0001
+
+Environment:
+  #Boardsize
+  boardsize: 5
+
+  #Final reward
+  final_reward: 1
+
+Training:
+  #Number of training episodes, actual games
+  number_of_episodes: 100
+
+  #Number of search games
+  number_of_search_games: 1000
+
+  #Final number of search games
+  final_sg: 1000
+
+  #Number of times to reduce search games
+  sg_reductions: 10
+
+  #MCTS randomness
+  mcts_epsilon: 0.75
+
+  #MCTS randomness decay
+  mcts_epsilon_decay: 1
+
+  #Show episodes
+  show_episodes: []
+
+Topp:
+  #number of games to play in TOPP
+  G: 30
+
+  #number of models to save
+  M: 5
+
+  #Show episodes
+  show_players: [] #[!!python/tuple [1,2], !!python/tuple [3,2]]
+
+Simulator:
+  # Which player should start
+  starting_pid: 1

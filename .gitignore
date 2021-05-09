@@ -1,0 +1,21 @@
+environment/__pycache__/
+*.py[cod]
+*$py.class
+
+agent/__pycache__/
+
+.idea
+
+# Output from running mcts.visualize()
+test-output/*
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+
+/shelf/
+/workspace.xml

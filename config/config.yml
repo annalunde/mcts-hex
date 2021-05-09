@@ -1,0 +1,74 @@
+Actor:
+  #Learning rate
+  learning_rate: 0.001
+  # 0.01 for 40 episodes 4x4 funker greit, ellers 0.001
+
+  #Internal layer dimensions
+  internal_dims: [256, 128, 64, 32]
+
+  #Batch size
+  batch_size: 0.5
+
+  #Number of epochs
+  epochs: 1
+
+  #Max length of replay buffer
+  replay_buffer_max_len: 100000
+
+  #the activation function for ANET
+  activation_function: "relu"
+  # linear, sigmoid, tanh, relu
+
+  #the optimizer for ANET
+  optimizer: "Adam"
+  #Adagrad, Stochastic GradientDescent (SGD), RMSProp, and Adam.
+
+  #Path to trained models
+  path_to_trained: "models/5x5_pretrained/5x5_demo" #! switch boardsize as well
+  # 4x4 pretrained path: "models/4x4_pretrained/4x4demo"
+  # 5x5 pretrained path: "models/5x5_pretrained/5x5_demo"
+  # live demo path: "models/4x4_live_demo"
+  # OHT models: models/6x6OHT/6x6_500_1000_working
+
+Environment:
+  #Boardsize
+  boardsize: 6
+
+  #Final reward
+  final_reward: 1
+
+Training:
+  #Number of training episodes, actual games
+  number_of_episodes: 100
+
+  #Number of search games
+  number_of_search_games: 2000
+
+  #Final number of search games
+  final_sg: 2000
+
+  #Number of times to reduce search games
+  sg_reductions: 0
+
+  #Epsilon
+  epsilon: 3
+
+  #Final epsilon
+  final_epsilon: 0.01
+
+  # Actual games to visualize for under training
+  show_episodes: [] # [10, 20]
+
+Topp:
+  #number of games to play in TOPP
+  G: 100
+
+  #number of models to save
+  M: 5
+
+  #Show topp game between actors
+  show_players: [] #[!!python/tuple [1,2], !!python/tuple [3,2]]
+
+Simulator:
+  # Which player should start
+  starting_pid: 1
