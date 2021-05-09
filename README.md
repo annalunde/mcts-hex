@@ -1,4 +1,4 @@
-# Monte Carlo tree search Hex solver using Deep Reinforcement Learning
+# Monte Carlo Tree Search Hex solver using Deep Reinforcement Learning
 
 This is the second of three projects in the AI programming course at NTNU. The group built an Actor Reinforcement Learner and has applied it to different instances of the game Hex. The Actor is a deep neural network that is trained on the probabilities given by the MCTS.
 
